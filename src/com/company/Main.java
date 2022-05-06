@@ -1,6 +1,7 @@
 package com.company;
 
 import javax.sound.midi.Soundbank;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -54,21 +55,40 @@ public class Main {
 //        t3.getDistinct();
 
     // TASK 4
-        Rectangle rectangle = new Rectangle();
-        System.out.println("Welcome to TASK 4: I'll give you the area and perimeter of given values.");
+//        Rectangle rectangle = new Rectangle();
+//        System.out.println("Welcome to TASK 4: I'll give you the area and perimeter of given values.");
+//
+//        Scanner scanRect = new Scanner(System.in);
+//        System.out.println("Please input the first value:");
+//        int a = scanRect.nextInt();
+//
+//        System.out.println("Please input the second value:");
+//        int b = scanRect.nextInt();
+//
+//        System.out.println("Area of " + a + " and " + b + " is equal to " );
+//        System.out.println(rectangle.getArea(a, b));
+//
+//        System.out.println("Perimeter of " + a + " and " + b + " is equal to " );
+//        System.out.println(rectangle.getPerimeter(a, b));
 
-        Scanner scanRect = new Scanner(System.in);
-        System.out.println("Please input the first value:");
-        int a = scanRect.nextInt();
+    // TASK 4 by David
+//        Rectangle_D rectangle_d = new Rectangle_D(4, 5);
+//        System.out.println("Area: " + rectangle_d.getArea());
+//        System.out.println("Perimeter: " + rectangle_d.getPerimeter());
 
-        System.out.println("Please input the second value:");
-        int b = scanRect.nextInt();
+    // TASK 5
+        Company companyTest = new Company("Test");
+        Emploee emploee1 = new Emploee("David", "Olabode", 25);
+        Emploee emploee2 = new Emploee("Zino", "LastZino", 25);
+        Emploee emploee3 = new Emploee("Egle", "LastEgle", 29);
+        Emploee emploee4 = new Emploee("Lina", "LastLina", 27);
+        Emploee emploee5 = new Emploee("Zane", "LastZane", 23);
 
-        System.out.println("Area of " + a + " and " + b + " is equal to " );
-        System.out.println(rectangle.getArea(a, b));
+        companyTest.setEmployees(new Emploee[]{emploee1, emploee2, emploee3, emploee4, emploee5});
+        // Printing information about the company:
+        System.out.println(companyTest);
 
-
-        System.out.println("Perimeter of " + a + " and " + b + " is equal to " );
-        System.out.println(rectangle.getPerimeter(a, b));
+        // Printing average age of employees
+        System.out.println(companyTest.getAverageAge());
     }
 }
